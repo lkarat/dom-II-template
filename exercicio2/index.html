@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
     <title>Prática Guiada 2</title>
 </head>
 <body>
@@ -14,9 +15,11 @@
           <input type="text" id="email" placeholder="e-mail" autocomplete="off" />
           <br />
           <input type="text" id="password" placeholder="senha" autocomplete="off" />
-          <button>esconder senha</button>
+          <button onclick="esconderSenha(event)">esconder senha</button>
           <br />
           <button>Login</button>
+
+          <button onclick="mudarCor(event)">dark</button>
         </form>
       </main>
 </body>
