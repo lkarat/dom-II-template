@@ -27,15 +27,29 @@ const esconderSenha = (event) => {
 const mudarCor = (event) => {
 event.preventDefault()
 
-const corBox = document.getElementsByClassName("light")[0]
 
 
-if (corBox.classList[0] === "light") {
-    corBox.setAttribute("class", "dark")
-} else if (corBox.classList[0] === "dark") {
-    corBox.setAttribute("class", "light")
+if (event.target.innerHTML === "dark") {
+    event.target.innerHTML = "light"
+    document.getElementsByClassName("light")[0].setAttribute("class", "dark")
+    
+} else {
+    event.target.innerHTML = "dark"
+    document.getElementsByClassName("dark")[0].setAttribute("class", "light")
 }
-console.log(corBox.classList[0]);
+
+
+// const corBox = document.getElementsByClassName("light")[0]
+// const corBox2 = document.getElementsByClassName("dark")[0]
+
+
+
+// if (corBox.classList[0] === "light") {
+//     corBox.setAttribute("class", "dark")
+// } else if (corBox2.classList[0] === "dark") {
+//     corBox.setAttribute("class", "light")
+// }
+console.log(event.target.innerHTML);
 
 
 // document.getElementsByClassName("light")[0].setAttribute("class", "dark")
